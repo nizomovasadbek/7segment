@@ -8,6 +8,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include "7seg.h"
 
 #define LATCH1_ADDR 0x03

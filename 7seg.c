@@ -36,5 +36,5 @@ char parse(char digit){
 			return 0b01110001;
 	}
 
-	return 0x00;
+	return 0x40;
 }
