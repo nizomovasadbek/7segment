@@ -3,7 +3,6 @@
 int main(void){
 	DDRA = 0xff;
 	DDRC |= (1 << LATCH1_ADDR)|(1 << LATCH2_ADDR)|(1 << LATCH3_ADDR)|(1 << LATCH4_ADDR);
-	char address[] = { LATCH1_ADDR, LATCH2_ADDR, LATCH3_ADDR, LATCH4_ADDR };
 	TCCR1B |= (1 << CS12)|(1 << CS10);
 	uint16_t value = 0;
 	uint8_t second, third, forth;
