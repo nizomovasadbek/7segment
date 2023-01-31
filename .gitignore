@@ -1,0 +1,8 @@
+/.settings/
+.cproject
+.project
+*.elf
+*.bin
+*.hex
+*.oct
+*.o
