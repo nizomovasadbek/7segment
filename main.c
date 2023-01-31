@@ -12,7 +12,7 @@ int main(void){
 		if(value >= 9999){
 			value = 0;
 		}
-		if(TCNT1 >= 7000){
+		if(TCNT1 >= 4000){
 
 			if(value == 9){
 				value = -1;
