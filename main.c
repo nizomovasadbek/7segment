@@ -12,20 +12,20 @@ int main(void){
 		if(value >= 9999){
 			value = 0;
 		}
-		if(TCNT1 >= 4000){
+		if(TCNT1 >= 15535){
 
 			if(value == 9){
 				value = -1;
 				PORTA = parse(++second);
 				render(LATCH2_ADDR);
-				if(second == 9){
+				if(second == 10){
 					second = 0;
 					third++;
 					PORTA = parse(second);
 					render(LATCH2_ADDR);
 					PORTA = parse(third);
 					render(LATCH3_ADDR);
-					if(third == 9){
+					if(third == 10){
 						third=0;
 						forth++;
 						PORTA = parse(third);
