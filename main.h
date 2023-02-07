@@ -17,6 +17,14 @@
 #define LATCH3_ADDR 0x01
 #define LATCH4_ADDR 0x00
 
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 void render(char);
+
+#ifdef __cplusplus
+	}
+#endif
 
 #endif
