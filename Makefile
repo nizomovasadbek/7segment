@@ -1,15 +1,16 @@
 CC=avr-gcc
-DEVICE=atmega32
-CONVERT=avr-objcopy -j .text -j .data -O ihex
-BINS=main.elf
+BIN=main.elf
 HEX=main.hex
-SRC=$(wildcard *.c)
+SRC_DIR=src
+SRC=$(shell find $(SRC_DIR) -type f -name '*.c')
+CONVERT=avr-objcopy -j .text -j .data -O ihex
+DEVICE=atmega32
 
-all: $(BINS) $(HEX)
+all: $(BIN) $(HEX)
 
-%.elf: %.c
-	$(CC) -mmcu=$(DEVICE) -Os $(SRC) -o $(BINS)
-	$(CONVERT) $(BINS) $(HEX)
+%.elf: $(SRC)
+	$(CC) -mmcu=$(DEVICE) -Os $(SRC) -o $(BIN)
+	$(CONVERT) $(BIN) $(HEX)
 	
 clean:
-	$(RM) $(BINS) $(HEX)
+	$(RM) $(BIN) $(HEX)

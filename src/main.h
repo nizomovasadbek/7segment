@@ -10,7 +10,7 @@
 #include <util/delay.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "7seg.h"
+#include "7seg/7seg.h"
 
 #define LATCH1_ADDR 0x03
 #define LATCH2_ADDR 0x02
