@@ -57,6 +57,6 @@ int main(void){
 
 void render(char address){
 	PORTC |= (1 << address);
-	_delay_ms(2);
+	volatile asm("nop");
 	PORTC &= ~(1 << address);
 }
